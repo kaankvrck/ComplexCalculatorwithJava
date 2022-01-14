@@ -1,6 +1,6 @@
 package CalculatorApp;
 
-public class  Complex {
+public class Complex {
 
     private double real;
     private double imaginary;
@@ -14,12 +14,12 @@ public class  Complex {
         return real;
     }
 
-    public double getImaginary() {
-        return imaginary;
-    }
-
     public void setReal(double real) {
         this.real = real;
+    }
+
+    public double getImaginary() {
+        return imaginary;
     }
 
     public void setImaginary(double imaginary) {
@@ -52,7 +52,7 @@ public class  Complex {
     }
 
     public String toString() {
-        if(Double.toString(getImaginary()).startsWith("-")){
+        if (Double.toString(getImaginary()).startsWith("-")) {
             return real + " " + imaginary + "i";
         }
         return real + " + " + imaginary + "i";

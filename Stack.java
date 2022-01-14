@@ -3,8 +3,8 @@ package CalculatorApp;
 public class Stack {
 
     private final Complex[] stack;
-    private int top;
     private final int maxSize;
+    private int top;
 
     public Stack(int s) {
         maxSize = s;
@@ -26,7 +26,7 @@ public class Stack {
             System.out.println("Stack is full");
             return null;
         }
-        Complex topVar2 = stack[top-1];
+        Complex topVar2 = stack[top - 1];
         stack[++top] = topVar2;
         return topVar2;
 
@@ -45,7 +45,7 @@ public class Stack {
             return null;
         }
 
-        Complex topVar = stack[top-2];
+        Complex topVar = stack[top - 2];
         stack[top++] = topVar;
         return topVar;
     }
