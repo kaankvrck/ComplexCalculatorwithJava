@@ -76,11 +76,15 @@ public class ComplexCalculatorGUI extends JFrame implements ActionListener {
             /*Complex j = stack.peek();
             System.out.println(list1.getSelectedValue().getReal());
             System.out.println(list1.getSelectedValue().getImaginary());*/
-        } else if (e.getSource() == pushButton) {
+        }
+
+        else if (e.getSource() == pushButton) {
             Complex j = new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
             stack.push(j);
             numbers.addElement(j);
-        } else if (e.getSource() == divideButton) {
+        }
+
+        else if (e.getSource() == divideButton) {
             solutionField.setText(list1.getSelectedValue().divide(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))).toString());
             numbers.add(numbers.getSize(), list1.getSelectedValue().divide(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))));
         } else if (e.getSource() == sqrtButton) {
@@ -93,10 +97,14 @@ public class ComplexCalculatorGUI extends JFrame implements ActionListener {
         } else if (e.getSource() == subtractButton) {
             solutionField.setText(list1.getSelectedValue().subtract(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))).toString());
             numbers.add(numbers.getSize(), list1.getSelectedValue().subtract(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))));
-        } else if (e.getSource() == addButton) {
+        }
+
+        else if (e.getSource() == addButton) {
             solutionField.setText(list1.getSelectedValue().add(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))).toString());
             numbers.add(numbers.getSize(), list1.getSelectedValue().add(new Complex(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()))));
-        } else if (e.getSource() == invertSignButton) {
+        }
+
+        else if (e.getSource() == invertSignButton) {
             solutionField.setText(list1.getSelectedValue().invertSign(new Complex(list1.getSelectedValue().getReal(), list1.getSelectedValue().getImaginary())).toString());
             numbers.add(numbers.getSize(), list1.getSelectedValue().invertSign(new Complex(list1.getSelectedValue().getReal(), list1.getSelectedValue().getImaginary())));
         } else if (e.getSource() == clearButton) {
