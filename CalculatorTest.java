@@ -6,19 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
+    Calculator a = new Calculator();
+
     @Test
     void main() {
-    }
 
-    @Test
-    void operation() {
-    }
-
-    @Test
-    void writeToFile() {
-    }
-
-    @Test
-    void readFromFile() {
     }
 }
